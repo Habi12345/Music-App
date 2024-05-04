@@ -75,32 +75,33 @@ main{
     padding: 50px 20px;
 }
 main main-wrapper{
-    width: calc(100% / 3 -5px);
+    max-width: calc(100% / 3 -5px);
     border-radius: 3px;
     overflow: hidden;
     margin-bottom: 25px;
     background: var(--grey-g-200, #303030);
     box-shadow: rgb(0, 0, 0) 0px 25px 20px -20px;
 }
+
 main main-wrapper:hover {
     transition: 2ms;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgb(0, 0, 0) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background: var(--grey-g-200, #303030);
 }
 
 main main-wrapper:focus:active {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgb(0, 0, 0) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background: var(--grey-g-200, #303030);
 }
 main-wrapper img{
     width: 100%;
     height: 250px;
     object-fit: cover;
-}
+} 
 main-wrapper p{
     padding:10px 10px;
 }
-main-wrapper h4{
+main-wrapper a{
     padding:10px 10px;
     text-align: center;
 }
@@ -129,3 +130,32 @@ audio::-webkit-media-controls-panel {
     color: #fff;
   }
 
+/* Add this to the bottom of your CSS file */
+
+@media (max-width: 768px) {
+    .search-bar-container {
+         flex-direction: column;
+         align-items: center;
+     }
+    .search-bar-wrapper {
+         width: 100%;
+         margin-bottom: 10px;
+     }
+     main main-wrapper {
+         width: 100%;
+         margin-bottom: 20px;
+     }
+ }
+ 
+ @media (max-width: 480px) {
+    .search-bar-wrapper {
+         height: 60px;
+     }
+    .search-bar-wrapper input {
+         width: 70%;
+     }
+     main main-wrapper {
+         width: 100%;
+         margin-bottom: 20px;
+     }
+ }

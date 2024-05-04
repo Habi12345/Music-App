@@ -6,12 +6,15 @@ const updateSearched = () =>{
     alert('Invalid Input')
   }else{
     const url = `https://itunes.apple.com/search?term=${searched}`
+    const displaySongs = document.getElementById('display-song');
+    while(displaySongs.firstChild){
+      displaySongs.removeChild(displaySongs.firstChild);
+    }
     fetch(url)
     .then(res => res.json())
     .then(data => {
       const artist = data.results
       return artist.map(result =>{
-        let displaySongs = document.getElementById('display-song');
         let mainWrapper = document.createElement('main-wrapper')
         /*let album = document.createElement('p')
         album.innerHTML = `${result.collectionName}`
@@ -28,6 +31,10 @@ const updateSearched = () =>{
         let song = document.createElement('a')
         song.innerHTML = `${result.trackName}`
         mainWrapper.appendChild(song)
+
+        let album = document.createElement('p')
+        album.innerHTML = `${result.collectionName}`
+        mainWrapper.appendChild(album)
         
         let audio = document.createElement('audio')
         audio.src = `${result.previewUrl}`
@@ -48,3 +55,12 @@ const updateSearched = () =>{
 
 const searchButton = document.getElementById('search-button');
 searchButton.addEventListener('click', updateSearched)
+
+document.addEventListener('play', event =>{
+  const audio = document.getElementsByTagName('audio');
+  for(i=0; i < audio.length; i++){
+    if(audio[i] != event.target){
+      audio[i].pause();
+    }
+  }
+},true)
