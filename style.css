@@ -20,8 +20,18 @@ header{
     display:flex;
     align-items: center;
     justify-content:space-evenly;
-    padding: 10px 20px;
+    padding: 5px 10px;
 }
+.logo-wrapper{
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo-wrapper a img{
+    width: 25%;
+}
+
 .search-bar-wrapper{
     display:flex;
     justify-content: space-between;
