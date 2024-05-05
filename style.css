@@ -1,37 +1,31 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+/* Body styles */
 body {
     font-family: 'Roboto', sans-serif;
     color: #fff;
     background: #616161;
+    height: 100vh  ;
 }
+/* Header styles */
 header{
     width:100%;
     height:auto;
 }
+/* Search bar container styles */
 .search-bar-container{
     width: 100%;
     margin: 0;
     display:flex;
     align-items: center;
     justify-content:space-evenly;
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
-.logo-wrapper{
-    padding: 8px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.logo-wrapper a img{
-    width: 25%;
-}
-
+/* Search bar wrapper styles */
 .search-bar-wrapper{
     display:flex;
     justify-content: space-between;
@@ -77,6 +71,22 @@ header{
 .search-bar-wrapper button .icon:hover{
     color: #E1E1E1;
 }
+/* Content styles */
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content span{
+    font-size: 70px;
+    font-weight: 500;
+    padding: 0 10px 0 10px;
+}
+.content span img{
+    width: 100%;
+    height: 100%;
+}
+/* Main styles */
 main{
     position: relative;
     display: flex;
@@ -168,4 +178,32 @@ audio::-webkit-media-controls-panel {
          width: 100%;
          margin-bottom: 20px;
      }
+     .content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+      }
+      
+      .content span {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:50px;
+        font-weight:400;
+        padding: 0 5px;
+        z-index: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 100%;
+      }
+      
+      .content img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(2px);
+      }
  }

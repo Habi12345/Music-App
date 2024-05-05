@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,19 +9,31 @@
     <title>Music Preview</title>
 </head>
 <body>
+    <!-- Header section -->
     <header>
+        <!-- Search bar container -->
         <div class="search-bar-container">
-            <div class="logo-wrapper">
-                <a href="#index.html"><img src="./images/logoUi2.png" alt=""></a>
-            </div>
+            <!-- Search bar wrapper -->
             <div class="search-bar-wrapper">
+                <!-- Search input field -->
                 <input type="search" name="" id="search-input" placeholder="Search for music....">
+                <!-- Search button -->
                 <button><i class="icon fa-solid fa-magnifying-glass" id="search-button"></i></button>
             </div>
         </div>
     </header>
+    <!-- Content section -->
+    <div class="content">
+        <!-- Logo image -->
+        <img src="./images/logoUi.png" alt="">
+        <!-- Welcome message -->
+        <span>Get 30s Music Preview from your favorite Artist</span>
+    </div>
+    <!-- Main section -->
     <main id="display-song">
+        <!--searched data would be displayed here-->
     </main>
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
